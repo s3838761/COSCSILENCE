@@ -15,8 +15,12 @@ class _HomePageState extends State<HomePage> {
     12,
     'johnsmith@gmail.com',
     /*Tickets*/ 120,
-    /*Tickets desired*/ 150
+    /*Tickets desired*/ 150,
+    /*Completed Tasks*/ 3,
+    /*Uncompleted Tasks*/ 8,
   ];
+
+  List guardArr = ['Maria', 'Smith', 'mariasmith123@gmail.com'];
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -30,19 +34,51 @@ class _HomePageState extends State<HomePage> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
               ),
               Text(
-                childArr[0],
+                guardArr[0],
                 style:
                     const TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
               ),
               const Spacer(),
+              const Text('Overview',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
               Container(
                 width: 300,
                 height: 300,
-                color: Colors.black26,
+                color: Colors.black12,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Text('Child Name: ${childArr[0]} ${childArr[1]}',
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18)),
+                      Row(
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: <Widget>[
+                          const Padding(
+                            padding: EdgeInsets.only(right: 75),
+                            child: Text('Current Task: '),
+                          ),
+                          const Text('Unknown name yet')
+                        ],
+                      ),
+                      Row(
+                        // ignore: prefer_const_literals_to_create_immutables
+                        children: <Widget>[
+                          const Padding(
+                            padding: EdgeInsets.only(right: 75),
+                            child: Text('Current Task: '),
+                          ),
+                          const Text('Unknown name yet')
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               ),
               const Spacer(),
               const Text(
-                'Reward Progression',
+                'Child’s Reward Progression!',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               Padding(
