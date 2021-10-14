@@ -26,7 +26,13 @@ class _RewardsPageGuardianState extends State<RewardsPageGuardian> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: Center(
+      body: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [Colors.red.shade100, Colors.blue.shade100])),
         child: Column(
           children: <Widget>[
             const Padding(

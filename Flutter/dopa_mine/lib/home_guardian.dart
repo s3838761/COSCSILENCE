@@ -24,7 +24,13 @@ class _HomePageGuardianState extends State<HomePageGuardian> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: Center(
+        body: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [Colors.red.shade100, Colors.blue.shade100])),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[

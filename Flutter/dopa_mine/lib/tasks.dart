@@ -36,11 +36,10 @@ class _TasksPageState extends State<TasksPage> {
   @override
   Widget build(BuildContext context) {
     final tasks = <String>[
-      'Task1',
-      'Task2',
-      'Task3',
-      'Task4',
-      'Task5',
+      'Clean the Dishes',
+      'Mow the Lawn',
+      'Take out the Trash',
+      'Paint the fence',
     ];
 
     return Scaffold(
@@ -50,35 +49,43 @@ class _TasksPageState extends State<TasksPage> {
             selected.add(Fortune.randomInt(0, tasks.length));
           });
         },
-        child: Column(
-          children: <Widget>[
-            const Padding(
-              padding: EdgeInsets.fromLTRB(20, 50, 20, 30),
-              child: Text(
-                'Task Picker',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
+        child: Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.bottomCenter,
+                  end: Alignment.topCenter,
+                  colors: [Colors.red.shade100, Colors.blue.shade100])),
+          child: Column(
+            children: <Widget>[
+              const Padding(
+                padding: EdgeInsets.fromLTRB(20, 50, 20, 30),
+                child: Text(
+                  'Task Picker',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
+                ),
               ),
-            ),
-            Expanded(
-              child: FortuneBar(
-                animateFirst: false,
-                styleStrategy: const AlternatingStyleStrategy(),
-                selected: selected.stream,
-                items: [
-                  for (var it in tasks)
-                    FortuneItem(
-                      child: Text(it),
-                      style: const FortuneItemStyle(
-                        borderColor: Colors.black,
-                        borderWidth: 3,
+              Expanded(
+                child: FortuneBar(
+                  animateFirst: false,
+                  styleStrategy: const AlternatingStyleStrategy(),
+                  selected: selected.stream,
+                  items: [
+                    for (var it in tasks)
+                      FortuneItem(
+                        child: Text(it),
+                        style: const FortuneItemStyle(
+                          borderColor: Colors.black,
+                          borderWidth: 3,
+                        ),
                       ),
-                    ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            ...rewardOptions.map(buildCheckbox).toList(),
-            const Spacer(),
-          ],
+              ...rewardOptions.map(buildCheckbox).toList(),
+              const Spacer(),
+            ],
+          ),
         ),
       ),
     );

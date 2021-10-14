@@ -26,7 +26,12 @@ class MyApp extends StatelessWidget {
         // "hot reload" (press "r" in the console where you ran "flutter run",
         // or press Run > Flutter Hot Reload in IntelliJ). Notice that the
         // counter didn't reset back to zero; the application is not restarted.
-        primarySwatch: Colors.teal,
+        splashColor: Colors.amber,
+        highlightColor: Colors.amber,
+        toggleableActiveColor: Colors.lightGreen,
+        canvasColor: Colors.blue.shade50,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.lightGreen)
+            .copyWith(secondary: Colors.blue),
       ),
       home: const SelectionPage(),
       debugShowCheckedModeBanner: false,
@@ -45,7 +50,13 @@ class _SelectionPageState extends State<SelectionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                begin: Alignment.bottomCenter,
+                end: Alignment.topCenter,
+                colors: [Colors.red.shade100, Colors.blue.shade100])),
         child: Column(
           children: <Widget>[
             const Spacer(),
@@ -101,10 +112,11 @@ class _ChildViewState extends State<ChildView> {
         ),
         bottomNavigationBar: BottomNavigationBar(
           // Bottom Nav Stlye
-          backgroundColor: Colors.amber.shade200,
+          backgroundColor: Colors.lightBlue.shade200,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           iconSize: 30,
+          selectedItemColor: Colors.red.shade900,
           type: BottomNavigationBarType.fixed,
           // Bottom Nav navigation
           currentIndex: currentIndex,
@@ -148,10 +160,11 @@ class _ParentalViewState extends State<ParentalView> {
         ),
         bottomNavigationBar: BottomNavigationBar(
           // Bottom Nav Stlye
-          backgroundColor: Colors.amber.shade200,
+          backgroundColor: Colors.lightBlue.shade200,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           iconSize: 30,
+          selectedItemColor: Colors.deepOrange,
           type: BottomNavigationBarType.fixed,
           // Bottom Nav navigation
           currentIndex: currentIndex,
