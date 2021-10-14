@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class RewardsPage extends StatefulWidget {
-  const RewardsPage({Key? key}) : super(key: key);
+class RewardsPageGuardian extends StatefulWidget {
+  const RewardsPageGuardian({Key? key}) : super(key: key);
 
   @override
-  _RewardsPageState createState() => _RewardsPageState();
+  _RewardsPageGuardianState createState() => _RewardsPageGuardianState();
 }
 
 final _numbers = ['10', '20', '30', '40', '50', '60', '70', '80', '90', '100'];
 String? value;
 
-class _RewardsPageState extends State<RewardsPage> {
+class _RewardsPageGuardianState extends State<RewardsPageGuardian> {
   final int ticketTotal = 55;
   final _formKey = GlobalKey<FormState>();
   final rewardOptions = [
@@ -40,7 +40,7 @@ class _RewardsPageState extends State<RewardsPage> {
             const Padding(
               padding: EdgeInsets.only(top: 50),
               child: Text(
-                'Add Rewards Options',
+                'Add Rewards Option',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
               ),
             ),

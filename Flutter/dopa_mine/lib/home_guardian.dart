@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePageGuardian extends StatefulWidget {
+  const HomePageGuardian({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _HomePageGuardianState createState() => _HomePageGuardianState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageGuardianState extends State<HomePageGuardian> {
   List childArr = [
     'John',
     'Smith',
