@@ -43,6 +43,16 @@ class _RewardsPageGuardianState extends State<RewardsPageGuardian> {
               ),
             ),
             ...rewardOptions.map(buildCheckbox).toList(),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
+                onPressed: () {},
+                child: const Text(
+                  'Delete Reward',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                )),
             const Padding(
               padding: EdgeInsets.only(top: 50),
               child: Text(
@@ -87,6 +97,7 @@ class _RewardsPageGuardianState extends State<RewardsPageGuardian> {
                             height: 40,
                             width: 60,
                             decoration: BoxDecoration(
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(color: Colors.black38)),
                             child: DropdownButtonHideUnderline(
@@ -104,13 +115,20 @@ class _RewardsPageGuardianState extends State<RewardsPageGuardian> {
                   ],
                 )),
             ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         content: Text('Adding Reward Option...')));
                   }
                 },
-                child: const Text('Add Reward'))
+                child: const Text(
+                  'Add Reward',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                )),
           ],
         ),
       ),

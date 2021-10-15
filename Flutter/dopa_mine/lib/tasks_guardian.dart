@@ -55,6 +55,16 @@ class _TasksPageGuardianState extends State<TasksPageGuardian> {
               ),
             ),
             ...rewardOptions.map(buildCheckbox).toList(),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
+                onPressed: () {},
+                child: const Text(
+                  'Delete Task',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                )),
             const Padding(
               padding: EdgeInsets.only(top: 50),
               child: Text(
@@ -99,6 +109,7 @@ class _TasksPageGuardianState extends State<TasksPageGuardian> {
                             height: 40,
                             width: 60,
                             decoration: BoxDecoration(
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(color: Colors.black38)),
                             child: DropdownButtonHideUnderline(
@@ -116,13 +127,20 @@ class _TasksPageGuardianState extends State<TasksPageGuardian> {
                   ],
                 )),
             ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Adding Task Option...')));
                   }
                 },
-                child: const Text('Add Task'))
+                child: const Text(
+                  'Add Task',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                )),
           ],
         ),
       ),

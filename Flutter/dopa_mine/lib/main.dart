@@ -1,3 +1,4 @@
+import 'package:dopa_mine/profile_guardian.dart';
 import 'package:dopa_mine/rewards_guardian.dart';
 import 'package:flutter/material.dart';
 import 'package:dopa_mine/tasks.dart';
@@ -149,7 +150,7 @@ class _ParentalViewState extends State<ParentalView> {
     const HomePageGuardian(),
     const TasksPageGuardian(),
     const RewardsPageGuardian(),
-    const ProfilePage()
+    const ProfilePageGuardian()
   ];
 
   @override
@@ -164,7 +165,7 @@ class _ParentalViewState extends State<ParentalView> {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           iconSize: 30,
-          selectedItemColor: Colors.deepOrange,
+          selectedItemColor: Colors.red.shade900,
           type: BottomNavigationBarType.fixed,
           // Bottom Nav navigation
           currentIndex: currentIndex,
