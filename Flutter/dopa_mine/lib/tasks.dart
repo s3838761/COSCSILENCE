@@ -82,6 +82,11 @@ class _TasksPageState extends State<TasksPage> {
                   ],
                 ),
               ),
+              const Text(
+                'Task Selected: ',
+                style: TextStyle(fontSize: 24),
+              ),
+              const Spacer(),
               ...rewardOptions.map(buildCheckbox).toList(),
               const Spacer(),
             ],

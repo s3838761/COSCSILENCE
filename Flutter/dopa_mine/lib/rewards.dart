@@ -53,7 +53,18 @@ class _RewardsPageState extends State<RewardsPage> {
               ],
             ),
             ...rewardOptions.map(buildCheckbox).toList(),
-            ElevatedButton(onPressed: () {}, child: const Text('Redeem'))
+            const Spacer(),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
+                onPressed: () {},
+                child: const Text(
+                  'REDEEM',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                )),
+            const Spacer()
           ],
         ),
       ),
