@@ -146,6 +146,7 @@ footer {
 
 .circle li {
     list-style: circle;
+    text-align: left;
 }
 
 .industry-data img {
