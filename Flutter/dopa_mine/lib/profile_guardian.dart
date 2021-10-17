@@ -80,7 +80,7 @@ class _ProfilePageGuardianState extends State<ProfilePageGuardian> {
             Column(
               children: <Widget>[
                 const Text(
-                  'Parent/Guardian Information',
+                  'Child\'s Information',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                 ),
                 Row(
