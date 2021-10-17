@@ -22,6 +22,7 @@
                           <a href="scope.html">Scopes and Limits</a>
                           <a href="toolsAndTech.html">Tools and Technology</a>
                           <a href="testing.html">Testing</a>
+                          <a href="prototype.html">Prototype</a>
                           <a href="risks.html">Risks and Group Communications</a>
                         </div>
                       </div> </li>
@@ -79,6 +80,10 @@
             <p>One of the major issues faced was actually learning to code with dart. Luckily dart is quite simple in the sense that everything is structured as widgets and presented in a Scaffolding structure. This means content is sectioned in blocks. The simplicity of this style of coding meant that implementing features like buttons and forms was as simple as copying and pasting. However, learning how to properly use the widgets meant a lot of time on YouTube watching tutorials and on Stack Overflow learning off the community. </p>
             <p>On top of this Flutter has an open-source library with community made widgets and features. One of these features which was originally planned on being implemented was the support of signing in with Google to make the sign in process easy and get the necessary information we needed to provide a personalised experience. However, after adding the dependency and countless hours on YouTube viewing how to properly integrate this feature, we came to the decision to scrap this feature from the prototype as it involved going through Firebase which offers this feature and other necessary features like a database for a paid subscription. Since we didn’t have the funds for the subscription, the time to learn how to implement Firebase and more importantly the knowledge on how to use it with the app at this stage, we decided to move on.</p>
             <p>Another open-sourced feature we added to our project was the inclusion of the then fortune wheel. We got this feature from pub.dev and found after successfully implementing the feature that the size would result in poor visibility and difficulty seeing the tasks. The way we decided to solve this issue was to change from a fortune wheel to a fortune slider. Luckily the dependency being used supports a fortune slider. (Dependency: <a href="https://pub.dev/packages/flutter_fortune_wheel" target="_blank">https://pub.dev/packages/flutter_fortune_wheel</a>)</p>
+            <img src="assests/wheelChange.png">
+            <p>As clearly shown in the images above not only does it improve readability but it saves some screen real estate which was then used for other widgets/features. However, another issue faced with this dependency was the lack of customization with the style of it. We planned on having a unique set of colours which would stand out with what was currently being used, but it defaults to the project's main colour. As of yet we have not found a clear way to solve this issue.</p>
+            <p>One of the final limitations we faced with Flutter is allowing for page scrolling. Page scrolling is a necessary feature which will be implemented at a later stage. This allows for the user to scroll if the screen shrinks for whatever reason. This issue will constantly occur when a text field is tapped on which opens the keyboard. An overflow error is shown. While not fixed as of yet, some research has been done to see possible solutions</p>
+            <img src="assests/overflowError.png" alt="" srcset="">
         </section>
 
         <footer>
