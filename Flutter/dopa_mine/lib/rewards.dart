@@ -8,12 +8,12 @@ class RewardsPage extends StatefulWidget {
 }
 
 class _RewardsPageState extends State<RewardsPage> {
-  final int ticketTotal = 55;
+  final int ticketTotal = 120;
 
   final rewardOptions = [
     CheckBoxState(title: 'Handful of Chocolate', cost: '100'),
     CheckBoxState(title: '1hr extra iPad time', cost: '150'),
-    CheckBoxState(title: '\$20', cost: '400'),
+    CheckBoxState(title: '\$10', cost: '100'),
     CheckBoxState(title: 'Choice of movie for Movie Night', cost: '250')
   ];
 

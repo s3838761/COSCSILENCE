@@ -30,14 +30,13 @@ class _TasksPageState extends State<TasksPage> {
     CheckBoxState(title: 'Clean Bathroom'),
     CheckBoxState(title: 'Do History Homework'),
     CheckBoxState(title: 'Feed the Dog'),
-    CheckBoxState(title: 'Learn the 9 times table')
+    CheckBoxState(title: 'Take out the Trash')
   ];
 
   @override
   Widget build(BuildContext context) {
     final tasks = <String>[
       'Clean the Dishes',
-      'Mow the Lawn',
       'Take out the Trash',
       'Paint the fence',
     ];
